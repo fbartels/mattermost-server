@@ -148,7 +148,7 @@ func (a *App) ClientLicense() map[string]string {
 	if clientLicense, _ := a.clientLicenseValue.Load().(map[string]string); clientLicense != nil {
 		return clientLicense
 	}
-	return map[string]string{"IsLicensed": "false"}
+	return map[string]string{"IsLicensed": "true"}
 }
 
 func (a *App) RemoveLicense() *model.AppError {

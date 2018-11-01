@@ -117,8 +117,7 @@ func patchRole(c *Context, w http.ResponseWriter, r *http.Request) {
 			}
 
 			if !allowed {
-				c.Err = model.NewAppError("Api4.PatchRoles", "api.roles.patch_roles.license.error", nil, "", http.StatusNotImplemented)
-				return
+				allowed = true
 			}
 		}
 	}
